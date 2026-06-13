@@ -1,116 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="stylesheet" href="cssbase.css">
-</head>
+    <link rel="stylesheet" href="cssbase.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul class="menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
     <main>
-        <section id="inicio">
-            <canvas id="matrix-bg"></canvas>
-            <div class="scanline"></div>
-            <div class="vignette"></div>
-            <div class="hero">
-                <h1>Lavínia Moreira</h1>
-                <h2>Desenvolvedora Web</h2>
-                <p>Construindo interfaces do futuro</p>
+      <section id="inicio">
+        <canvas id="matrix-bg"></canvas>
+        <div class="scanline"></div>
+        <div class="vignette"></div>
+        <div class="hero">
+          <h1>Lavínia Moreira</h1>
+          <h2>Desenvolvedora Web</h2>
+          <p>Construindo interfaces do futuro</p>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <div class="sub_conteudo">
+          <h2>Sobre mim</h2>
+          <p>
+            Tenho 25 anos e hoje trabalho em produção, mas minha cabeça vive no
+            mundo da tecnologia. Fiz técnico de Informática para Internet e
+            desde então não parei — HTML, CSS, PHP, banco de dados, e
+            JavaScript. Cada coisa nova que aprendo me puxa mais fundo nessa
+            área. Tenho inglês e gosto de entender como as coisas funcionam por
+            baixo dos panos. Me identifico muito com estéticas futuristas e
+            distópicas, acho que o design pode contar uma história só pelas
+            cores e pela atmosfera. Quando não tô codando, tô ouvindo chuva e
+            tentando manter a paz.
+          </p>
+          <ul>
+            <li>PHP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>MySql</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projetos">
+        <div class="projeto-grid">
+          <div class="card" onclick="abrirAlbum(['imagem/indexquiz.png'], 0)">
+            <img src="imagem/indexquiz.png" alt="QuizMania" class="img-card" />
+            <h3>DinoQuiz</h3>
+            <p>
+              Quiz sobre dinossauros com sistema de login, cadastro e placar
+              personalizado
+            </p>
+          </div>
+
+          <div
+            class="card"
+            onclick="
+              abrirAlbum(
+                [
+                  'imagem/glicoinicio.png',
+                  'imagem/glicoofer.png',
+                  'imagem/glicosobre.png',
+                  'imagem/glicocontato.png',
+                  'imagem/gotinhaini.png',
+                  'imagem/gotinhapq.png',
+                  'imagem/gotinhaexpres.png',
+                  'imagem/gotinhaend.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img
+              src="imagem/glicoinicio.png"
+              alt="GlicoLife"
+              class="img-card"
+            />
+            <h3>GlicoLife</h3>
+            <p>Sistema de controle de glicose inteligente</p>
+          </div>
+
+          <div
+            class="card"
+            onclick="
+              abrirAlbum(
+                [
+                  'imagem/invoria.png',
+                  'imagem/invoriasobre.png',
+                  'imagem/invoriacontato.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="imagem/invoria.png" alt="Estoque" class="img-card" />
+            <h3>Invoria</h3>
+            <p>Controle de produtos, faturamento e gerenciamento.</p>
+          </div>
+
+          <div
+            class="card"
+            onclick="
+              abrirAlbum(
+                [
+                  'imagem/horai.png',
+                  'imagem/horaifunc.png',
+                  'imagem/horaiquem.png',
+                  'imagem/horaicontato.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="imagem/horai.png" alt="Agendamento" class="img-card" />
+            <h3>Horaí</h3>
+            <p>Plataforma de agendamento para multinegócios.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="cont-form">
+          <h2>Contato</h2>
+          <p>Tem um projeto em mente? Vamos conversar!</p>
+          <form action="https://formspree.io/f/maqkyygj" method="post">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" placeholder="Seu nome" />
             </div>
-        </section>
-
-        <section id="sobre">
-            <div class="sub_conteudo">
-                <h2>Sobre mim</h2>
-                <p>Tenho 25 anos e hoje trabalho em produção, mas minha cabeça vive no mundo da tecnologia.
-                    Fiz técnico de Informática para Internet e desde então não parei — HTML, CSS, PHP, banco de dados, e
-                    o básico de JS. Cada coisa nova que aprendo me puxa mais fundo nessa área. Tenho inglês e gosto de
-                    entender como as coisas funcionam por baixo dos panos. Me identifico muito com estéticas futuristas
-                    e distópicas, acho que o design pode contar uma história só pelas cores e pela atmosfera. Quando não
-                    tô codando, tô ouvindo chuva e tentando manter a paz.</p>
-                <ul>
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                    <li>MySql</li>
-                </ul>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="xxxxxx@gmail.com"
+              />
             </div>
-        </section>
-
-        <section id="projetos">
-            <div class="projeto-grid">
-
-                <div class="card" onclick="abrirAlbum(['imagem/indexquiz.png'], 0)">
-                    <img src="imagem/indexquiz.png" alt="QuizMania" class="img-card">
-                    <h3>DinoQuiz</h3>
-                    <p>Quiz sobre dinossauros com sistema de login, cadastro e placar personalizado</p>
-                </div>
-
-                <div class="card" onclick="abrirAlbum(['imagem/glicoinicio.png','imagem/glicoofer.png', 'imagem/glicosobre.png', 'imagem/glicocontato.png', 'imagem/gotinhaini.png', 'imagem/gotinhapq.png', 'imagem/gotinhaexpres.png', 'imagem/gotinhaend.png'], 0)">
-                    <img src="imagem/glicoinicio.png" alt="GlicoLife" class="img-card">
-                    <h3>GlicoLife</h3>
-                    <p>Sistema de controle de glicose inteligente</p>
-                </div>
-
-            
-                <div class="card" onclick="abrirAlbum(['imagem/invoria.png', 'imagem/invoriasobre.png', 'imagem/invoriacontato.png'], 0)">
-                    <img src="imagem/invoria.png" alt="Estoque" class="img-card">
-                    <h3>Sistema de Estoque</h3>
-                    <p>Controle de produtos, faturamento e gerenciamento.</p>
-                </div>
-            
-
-                <div class="card" onclick="abrirAlbum(['imagem/horai.png', 'imagem/horaifunc.png', 'imagem/horaiquem.png', 'imagem/horaicontato.png'], 0)">
-                    <img src="imagem/horai.png" alt="Agendamento" class="img-card">
-                    <h3>Horaí</h3>
-                    <p>Plataforma de agendamento para multinegócios.</p>
-                </div>
-
+            <div class="form-group">
+              <label for="msg">Mensagem</label>
+              <textarea
+                name="msg"
+                id="msg"
+                placeholder="Sua mensagem..."
+              ></textarea>
             </div>
-        </section>
-
-        <section id="contato">
-            <div class="cont-form">
-                <h2>Contato</h2>
-                <p>Tem um projeto em mente? Vamos conversar!</p>
-                <form action="https://formspree.io/f/maqkyygj" method="post">
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="xxxxxx@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="msg">Mensagem</label>
-                        <textarea name="msg" id="msg" placeholder="Sua mensagem..."></textarea>
-                    </div>
-                    <button type="submit">Enviar mensagem</button>
-                </form>
-            </div>
-        </section>
+            <button type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <div id="lightbox">
-        <button id="btn-prev" onclick="imagemAnterior()">&#8592;</button>
-        <img id="lightbox-img" src="" alt="">
-        <button id="btn-next" onclick="proximaImagem()">&#8594;</button>
-        <span id="lightbox-contador"></span>
+      <button id="btn-prev" onclick="imagemAnterior()">&#8592;</button>
+      <img id="lightbox-img" src="" alt="" />
+      <button id="btn-next" onclick="proximaImagem()">&#8594;</button>
+      <span id="lightbox-contador"></span>
     </div>
 
     <script src="jscode.js"></script>
-</body>
-
+  </body>
 </html>
