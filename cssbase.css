@@ -1,336 +1,379 @@
-@import url('https://fonts.googleapis.com/css2?family=Science+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Science+Gothic&display=swap");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Science Gothic', sans-serif;
+  background-color: black;
+  color: white;
+  font-family: "Science Gothic", sans-serif;
 }
 nav {
-    background-color: #0d0d1a;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    display: flex;
-    z-index: 100;
+  background-color: #0d0d1a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  z-index: 100;
 }
 nav a {
-    color: #00BFFF;
-    text-decoration: none;
-    font-size: 18px;
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 18px;
 }
 .menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    padding: 12px 10px
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 12px 10px;
 }
 
 /* ===== INICIO COM MATRIX ===== */
 #inicio {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #000 url("imagem/bg-inicio.jpg") center center / cover no-repeat;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
 }
 
 #matrix-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .scanline {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0, 191, 255, 0.015) 2px,
-        rgba(0, 191, 255, 0.015) 4px
-    );
-    pointer-events: none;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 191, 255, 0.015) 2px,
+    rgba(0, 191, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .vignette {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
-    pointer-events: none;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    padding-top: 2px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding-top: 2px;
 }
 
 #inicio h1 {
-    font-size: 4rem;
-    color: #00BFFF;
-    text-shadow: 0 0 10px #7B68EE, 0 0 20px #00BFFF, 0 0 40px #026383;
+  font-size: 4rem;
+  color: #00bfff;
+  text-shadow:
+    0 0 10px #7b68ee,
+    0 0 20px #00bfff,
+    0 0 40px #026383;
 }
 #inicio h2 {
-    font-size: 1.5rem;
-    color: #7B68EE;
+  font-size: 1.5rem;
+  color: #7b68ee;
 }
 #inicio p {
-    color: #ffffff66;
-    font-size: 1rem;
-    margin-top: 8px;
+  color: #ffffff66;
+  font-size: 1rem;
+  margin-top: 8px;
 }
 
 /* ===== SOBRE ===== */
 #sobre {
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    display: flex;
-    background-color: #0a0a0a;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  background-color: #0a0a0a;
 }
 .sub_conteudo {
-    max-width: 600px;
-    padding: 5px 10px;
-    margin-top: 60px;
+  max-width: 600px;
+  padding: 5px 10px;
+  margin-top: 60px;
 }
 #sobre h2 {
-    color: #00BFFF;
-    text-shadow: 0 0 10px #00BFFF, 0 0 20px #7B68EE, 0 0 40px #00BFFF;
+  color: #00bfff;
+  text-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #7b68ee,
+    0 0 40px #00bfff;
 }
 #sobre p {
-    line-height: 1.8;
-    margin-bottom: 0;
+  line-height: 1.8;
+  margin-bottom: 0;
 }
 #sobre ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 #sobre ul li {
-    border: 1px solid #7B68EE;
-    padding: 4px 12px;
-    border-radius: 99px;
-    font-size: 13px;
-    color: #00BFFF;
+  border: 1px solid #7b68ee;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 13px;
+  color: #00bfff;
 }
 
 /* ===== PROJETOS ===== */
 .projeto-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 .card {
-    background: #111;
-    border: 1px solid #7B68EE;
-    border-radius: 16px;
-    padding: 30px;
-    cursor: pointer;
+  background: #111;
+  border: 1px solid #7b68ee;
+  border-radius: 16px;
+  padding: 30px;
+  cursor: pointer;
 }
 .card h3 {
-    color: #FF8C00;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+  color: #ff8c00;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 12px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 #projetos {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
 }
 
 /* ===== LIGHTBOX CARROSSEL ===== */
 #lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.92);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 #lightbox.ativo {
-    display: flex;
+  display: flex;
 }
 #lightbox img {
-    max-width: 80%;
-    max-height: 80vh;
-    border-radius: 8px;
-    object-fit: contain;
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
 }
-#btn-prev, #btn-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(123, 104, 238, 0.3);
-    border: 1px solid #7B68EE;
-    color: white;
-    font-size: 1.5rem;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
+#btn-prev,
+#btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(123, 104, 238, 0.3);
+  border: 1px solid #7b68ee;
+  color: white;
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
 }
-#btn-prev { left: 20px; }
-#btn-next { right: 20px; }
-#btn-prev:hover, #btn-next:hover {
-    background: rgba(123, 104, 238, 0.7);
+#btn-prev {
+  left: 20px;
+}
+#btn-next {
+  right: 20px;
+}
+#btn-prev:hover,
+#btn-next:hover {
+  background: rgba(123, 104, 238, 0.7);
 }
 #lightbox-contador {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #7B68EE;
-    font-size: 13px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #7b68ee;
+  font-size: 13px;
 }
 
 /* ===== CONTATO ===== */
 #contato {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0d0d1a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d1a;
 }
 .cont-form {
-    max-width: 500px;
-    width: 100%;
+  max-width: 500px;
+  width: 100%;
 }
 #contato h2 {
-    text-shadow: 0 0 10px #D2691E, 0 0 20px #FFA500, 0 0 40px #FF8C00;
-    color: #FF8C00;
-    margin-bottom: 8px;
+  text-shadow:
+    0 0 10px #d2691e,
+    0 0 20px #ffa500,
+    0 0 40px #ff8c00;
+  color: #ff8c00;
+  margin-bottom: 8px;
 }
 #contato p {
-    color: #00BFFF;
-    margin-bottom: 12px;
+  color: #00bfff;
+  margin-bottom: 12px;
 }
 #contato label {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: #a0a0a0;
-    margin-bottom: 6px;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin-bottom: 6px;
 }
 #contato input {
-    width: 100%;
-    height: 40px;
-    padding: 0 12px;
-    background: transparent;
-    border: 1px solid #7B68EE;
-    border-radius: 8px;
-    color: white;
-    font-size: 14px;
-    outline: none;
-    font-family: 'Science Gothic', sans-serif;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background: transparent;
+  border: 1px solid #7b68ee;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  font-family: "Science Gothic", sans-serif;
+  margin-bottom: 1rem;
 }
 #contato input:focus {
-    border-color: #FF8C00;
-    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
 }
 #contato textarea {
-    width: 100%;
-    height: 120px;
-    padding: 12px;
-    border: 1px solid #7B68EE;
-    border-radius: 8px;
-    resize: none;
-    background: transparent;
-    color: white;
-    font-family: 'Science Gothic', sans-serif;
-    font-size: 14px;
-    outline: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #7b68ee;
+  border-radius: 8px;
+  resize: none;
+  background: transparent;
+  color: white;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 14px;
+  outline: none;
 }
 #contato button {
-    width: 100%;
-    height: 42px;
-    margin-top: 0.5rem;
-    background: #FF8C00;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: opacity 0.15s;
-    font-family: 'Science Gothic', sans-serif;
+  width: 100%;
+  height: 42px;
+  margin-top: 0.5rem;
+  background: #ff8c00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: "Science Gothic", sans-serif;
 }
 #contato button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .msg-sucesso {
-    color: #00BFFF;
-    margin-bottom: 1rem;
-    font-size: 14px;
+  color: #00bfff;
+  margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .menu {
-        gap: 12px;
-        padding: 8px 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    nav a { font-size: 14px; }
+  .menu {
+    gap: 12px;
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    font-size: 14px;
+  }
 
-    #inicio h1 { font-size: 2.2rem; }
-    #inicio h2 { font-size: 1rem; }
+  #inicio h1 {
+    font-size: 2.2rem;
+  }
+  #inicio h2 {
+    font-size: 1rem;
+  }
 
-    .sub_conteudo {
-        padding: 20px 24px;
-        margin-top: 80px;
-    }
+  .sub_conteudo {
+    padding: 20px 24px;
+    margin-top: 80px;
+  }
 
-    .projeto-grid { grid-template-columns: 1fr; }
-    #projetos { padding: 80px 20px; }
+  .projeto-grid {
+    grid-template-columns: 1fr;
+  }
+  #projetos {
+    padding: 80px 20px;
+  }
 
-    .cont-form { padding: 0 24px; }
+  .cont-form {
+    padding: 0 24px;
+  }
 
-    #btn-prev { left: 8px; }
-    #btn-next { right: 8px; }
+  #btn-prev {
+    left: 8px;
+  }
+  #btn-next {
+    right: 8px;
+  }
 }
