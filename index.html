@@ -1,172 +1,431 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>Lavínia Moreira | Desenvolvedora Full Stack</title>
+    <meta
+      name="description"
+      content="Portfólio de Lavínia Moreira, desenvolvedora Full Stack em formação. Projetos com PHP, MySQL, JavaScript, TypeScript, React e Node.js."
+    />
+
+    <!-- Open Graph / redes sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lavínia Moreira | Desenvolvedora Full Stack" />
+    <meta
+      property="og:description"
+      content="Transformando ideias em aplicações web funcionais, do conceito ao código."
+    />
+    <meta property="og:image" content="imagem/glicoinicio.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="imagem/favicon.svg" type="image/svg+xml" />
+
     <link rel="stylesheet" href="cssbase.css" />
   </head>
 
   <body>
-    <nav>
-      <ul class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre">Sobre mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+    <header>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <section id="inicio">
-        <canvas id="matrix-bg"></canvas>
-        <div class="scanline"></div>
-        <div class="vignette"></div>
+        <canvas id="matrix-bg" aria-hidden="true"></canvas>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="vignette" aria-hidden="true"></div>
+
         <div class="hero">
+          
           <h1>Lavínia Moreira</h1>
-          <h2>Desenvolvedora Web</h2>
-          <p>Construindo interfaces do futuro</p>
+
+          <h2>Desenvolvedora Full Stack em formação</h2>
+
+          <p>
+            Transformando ideias em aplicações web funcionais,
+            do conceito ao código.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/laviniamoreira/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Lavínia Moreira"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/devlavin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Lavínia Moreira"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="sobre">
         <div class="sub_conteudo">
-          <h2>Sobre mim</h2>
-          <p>
-            Desenvolvedora web com base em HTML, CSS, JavaScript, TypeScript, PHP e banco de
-            dados. Formada em Técnico em Informática para Internet e cursando
-            ADS — construo projetos reais desde o início dos meus estudos. Estou
-            expandindo para React, Node.js e Python com foco em desenvolvimento
-            full stack. Me identifico com design futurista e distópico: acredito
-            que uma boa interface conta uma história só pela atmosfera.
+          <span class="section-label"></span>
+
+          <h2 style="margin-bottom: 22px">Construindo soluções através do código.</h2>
+
+          <p style="margin-bottom: 12px">
+            Sou estudante de Análise e Desenvolvimento de Sistemas e
+            desenvolvedora web em formação. Tenho formação técnica em
+            Informática para Internet e venho desenvolvendo projetos
+            próprios desde o início dos meus estudos.
           </p>
-          <ul>
-            <li>PHP</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>TYPESCRIPT</li>
-            <li>MySql</li>
-          </ul>
+
+          <p>
+            Tenho experiência prática com HTML, CSS, JavaScript, TypeScript,
+            PHP e MySQL e atualmente estou expandindo meus conhecimentos em
+            React, Node.js e Python, com foco em desenvolvimento Full Stack.
+          </p>
+
+          <div class="skills">
+            <div class="skill-group">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <ul>
+                <li>PHP</li>
+                <li>Node.js</li>
+                <li>Express</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Banco de dados</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h3>Ferramentas</h3>
+              <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="projetos">
-        <div class="projeto-grid">
-          <div class="card" onclick="abrirAlbum(['imagem/indexquiz.png'], 0)">
-            <img src="imagem/indexquiz.png" alt="QuizMania" class="img-card" />
-            <h3>DinoQuiz</h3>
-            <p>
-              Quiz sobre dinossauros com sistema de login, cadastro e placar
-              personalizado
-            </p>
-          </div>
+        <div class="projetos-container">
+          <span class="section-label" style="color: #00bfff; margin-bottom: 15px">PROJETOS</span>
 
-          <div
-            class="card"
-            onclick="
-              abrirAlbum(
-                [
-                  'imagem/glicoinicio.png',
-                  'imagem/glicoofer.png',
-                  'imagem/glicosobre.png',
-                  'imagem/glicocontato.png',
-                  'imagem/gotinhaini.png',
-                  'imagem/gotinhapq.png',
-                  'imagem/gotinhaexpres.png',
-                  'imagem/gotinhaend.png',
-                ],
-                0,
-              )
-            "
-          >
-            <img
-              src="imagem/glicoinicio.png"
-              alt="GlicoLife"
-              class="img-card"
-            />
-            <h3>GlicoLife</h3>
-            <p>Sistema de controle de glicose inteligente</p>
-            <a href="https://glicolife.me" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-          </div>
+          <p class="projetos-intro" style="margin-bottom: 18px">
+            Alguns dos projetos que desenvolvi durante minha jornada
+            de aprendizado e desenvolvimento.
+          </p>
 
-          <div
-            class="card"
-            onclick="
-              abrirAlbum(
-                [
-                  'imagem/invoria.png',
-                  'imagem/invoriasobre.png',
-                  'imagem/invoriacontato.png',
-                ],
-                0,
-              )
-            "
-          >
-            <img src="imagem/invoria.png" alt="Estoque" class="img-card" />
-            <h3>Invoria</h3>
-            <p>Controle de produtos, faturamento e gerenciamento.</p>
-          </div>
+          <div class="projeto-grid">
 
-          <div
-            class="card"
-            onclick="
-              abrirAlbum(
-                [
-                  'imagem/horai.png',
-                  'imagem/horaifunc.png',
-                  'imagem/horaiquem.png',
-                  'imagem/horaicontato.png',
-                ],
-                0,
-              )
-            "
-          >
-            <img src="imagem/horai.png" alt="Agendamento" class="img-card" />
-            <h3>Horaí</h3>
-            <p>Plataforma de agendamento para multinegócios.</p>
+            <!-- GLICOLIFE -->
+            <article
+              class="card card-destaque"
+              tabindex="0"
+              role="button"
+              aria-label="Ver galeria de imagens do projeto GlicoLife"
+              data-images='["imagem/glicoinicio.png","imagem/glicoofer.png","imagem/glicosobre.png","imagem/glicocontato.png","imagem/gotinhaini.png","imagem/gotinhapq.png","imagem/gotinhaexpres.png","imagem/gotinhaend.png"]'
+              onclick="abrirAlbum(JSON.parse(this.dataset.images), 0)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirAlbum(JSON.parse(this.dataset.images), 0);}"
+            >
+              <img
+                src="imagem/glicoinicio.png"
+                alt="Tela inicial do GlicoLife"
+                class="img-card"
+                loading="eager"
+                decoding="async"
+                width="640"
+                height="400"
+              />
+
+              <div class="card-content">
+                <h3>GlicoLife</h3>
+                <p>
+                  Sistema web para acompanhamento e gerenciamento
+                  de informações relacionadas à glicose.
+                </p>
+
+                <div class="project-tags" style="color: #7b68ee">
+                  <span>PHP |</span>
+                  <span>MySQL |</span>
+                  <span>JavaScript |</span>
+                  <span>HTML/CSS</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://glicolife.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="event.stopPropagation()"
+                  >
+                    Ver projeto
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- W♡W -->
+            <article
+              class="card"
+              tabindex="0"
+              role="button"
+              aria-label="Ver imagem do projeto W♡W"
+              data-images='["imagem/welcome-screen.png", "imagem/login-screen.png", "imagem/signup-screen.png"]'
+              onclick="abrirAlbum(JSON.parse(this.dataset.images), 0)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirAlbum(JSON.parse(this.dataset.images), 0);}"
+            >
+              <img
+                src="imagem/welcome-screen.png"
+                alt="W♡W - aplicativo de relacionamento para mulheres"
+                class="img-card"
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="400"
+              />
+
+              <div class="card-content">
+                <h3>W♡W</h3>
+                <p style="color: #ff8c00">Projeto em desevolvimento</p>
+                <p>
+                  Plataforma de relacionamento criada para mulheres
+                  que amam mulheres, com foco em segurança, conforto
+                  e conexões reais.
+                </p>
+
+                <div class="project-tags" style="color: #7b68ee">
+                  <span>Next.js |</span>
+                  <span>React |</span>
+                  <span>TypeScript |</span>
+                  <span>UI/UX</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- JOI -->
+            <article
+              class="card"
+              tabindex="0"
+              role="button"
+              aria-label="Ver imagem do projeto Joi"
+              data-images='["imagem/joi-1.png", "imagem/joi-2.png", "imagem/joi-3.png"]'
+              onclick="abrirAlbum(JSON.parse(this.dataset.images), 0)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirAlbum(JSON.parse(this.dataset.images), 0);}"
+            >
+              <img
+                src="imagem/joi-1.png"
+                alt="Joi - projeto de chatbot"
+                class="img-card"
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="400"
+              />
+
+              <div class="card-content">
+                <h3>Joi</h3>
+                <p style="color: #ff8c00">Projeto experimental</p>
+                <p>
+                  Projeto experimental de chatbot desenvolvido para
+                  explorar reconhecimento de intenções, interação
+                  conversacional e futuras aplicações de inteligência
+                  artificial em modelo holográfico.
+                </p>
+
+                <div class="project-tags" style="color: #7b68ee">
+                  <span>HTML |</span>
+                  <Span>Three.js |</Span>
+                  <span>TypeScript |</span>
+                  <span>Node.js |</span>
+                  <span>Chatbot |</span>
+                  <span>IA</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/devlavin/joi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="event.stopPropagation()"
+                  >
+                    Ver repositório
+                  </a>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- DINOQUIZ -->
+            <article
+              class="card"
+              tabindex="0"
+              role="button"
+              aria-label="Ver imagem do projeto DinoQuiz"
+              data-images='["imagem/indexquiz.png"]'
+              onclick="abrirAlbum(JSON.parse(this.dataset.images), 0)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirAlbum(JSON.parse(this.dataset.images), 0);}"
+            >
+              <img
+                src="imagem/indexquiz.png"
+                alt="DinoQuiz"
+                class="img-card"
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="400"
+              />
+
+              <div class="card-content">
+                <h3>DinoQuiz</h3>
+                <p>
+                  <p style="color: #ff8c00">Projeto Acadêmico</p>
+                
+                  Quiz interativo sobre dinossauros com sistema de
+                  cadastro, login e placar personalizado.
+                </p>
+
+                <div class="project-tags" style="color: #7b68ee">
+                  <span>HTML |</span>
+                  <span>CSS |</span>
+                  <span>JavaScript |</span>
+                  <span>PHP</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/devlavin/dino-quiz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="event.stopPropagation()"
+                  >
+                    Ver repositório
+                  </a>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
 
+      <!-- CONTATO -->
       <section id="contato">
         <div class="cont-form">
-          <h2>Contato</h2>
-          <p>Tem um projeto em mente? Vamos conversar!</p>
+
+          <h2>Vamos construir</h2>
+
+          <p style="color: white">
+            Tem um projeto em mente, uma oportunidade ou quer conversar
+            sobre desenvolvimento? Entre em contato.
+          </p>
+
           <form action="https://formspree.io/f/maqkyygj" method="post">
+            <!-- honeypot anti-spam: campo invisível, bots preenchem, humanos não veem -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio" />
+
             <div class="form-group">
               <label for="nome">Nome</label>
-              <input type="text" name="nome" id="nome" placeholder="Seu nome" />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Seu nome"
+                autocomplete="name"
+                required
+              />
             </div>
+
             <div class="form-group">
               <label for="email">E-mail</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="xxxxxx@gmail.com"
+                placeholder="seuemail@gmail.com"
+                autocomplete="email"
+                required
               />
             </div>
+
             <div class="form-group">
               <label for="msg">Mensagem</label>
               <textarea
                 name="msg"
                 id="msg"
                 placeholder="Sua mensagem..."
+                required
               ></textarea>
             </div>
+
             <button type="submit">Enviar mensagem</button>
           </form>
         </div>
       </section>
     </main>
 
-    <div id="lightbox">
-      <button id="btn-prev" onclick="imagemAnterior()">&#8592;</button>
+    <footer>
+      <p>
+        © <span id="ano-atual"></span> Lavínia Moreira. Feito com código e café.
+      </p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de imagens">
+      <button id="btn-fechar" onclick="fecharImagem()" aria-label="Fechar galeria">
+        &#10005;
+      </button>
+
+      <button id="btn-prev" onclick="imagemAnterior()" aria-label="Imagem anterior">
+        &#8592;
+      </button>
+
       <img id="lightbox-img" src="" alt="" />
-      <button id="btn-next" onclick="proximaImagem()">&#8594;</button>
+
+      <button id="btn-next" onclick="proximaImagem()" aria-label="Próxima imagem">
+        &#8594;
+      </button>
+
       <span id="lightbox-contador"></span>
     </div>
 
     <script src="jscode.js"></script>
+    <script>
+      document.getElementById("ano-atual").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

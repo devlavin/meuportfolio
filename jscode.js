@@ -4,6 +4,10 @@
   const ctx = canvas.getContext("2d");
   const FS = 13;
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   let W, H, cols, drops;
 
   function resize() {
@@ -85,6 +89,13 @@
   window.addEventListener("load", () => {
     resize();
     window.addEventListener("resize", resize);
+
+    // respeita quem pediu menos animação no sistema; desenha só 1 frame estático
+    if (prefersReducedMotion) {
+      draw();
+      return;
+    }
+
     setInterval(draw, 50);
   });
 })();
