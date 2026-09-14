@@ -87,34 +87,33 @@
           <h2 style="margin-bottom: 22px">Construindo soluções através do código.</h2>
 
           <p style="margin-bottom: 12px">
-            Sou estudante de Análise e Desenvolvimento de Sistemas e
-            desenvolvedora web em formação. Tenho formação técnica em
-            Informática para Internet e venho desenvolvendo projetos
-            próprios desde o início dos meus estudos.
+            Desenvolvedora Full Stack, estudante de Análise e Desenvolvimento de
+            Sistemas. Construo e coloco no ar aplicações reais — não só projetos
+            de estudo — desde a formação técnica em Informática para Internet.
           </p>
 
           <p>
-            Tenho experiência prática com HTML, CSS, JavaScript, TypeScript,
-            PHP e MySQL e atualmente estou expandindo meus conhecimentos em
-            React, Node.js e Python, com foco em desenvolvimento Full Stack.
+            Foco em Python e React, com experiência prática também em
+            JavaScript, TypeScript e Node.js. Já desenvolvi e coloquei em produção
+            aplicações full stack completas como o GLicolife - Sistema de controle de glicose e a loja Geek World (Projeto de estudo), do banco de dados à interface.
           </p>
 
           <div class="skills">
             <div class="skill-group">
               <h3>Frontend</h3>
               <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
               </ul>
             </div>
 
             <div class="skill-group">
               <h3>Backend</h3>
               <ul>
-                <li>PHP</li>
+                <li>Python</li>
                 <li>Node.js</li>
                 <li>Express</li>
               </ul>
@@ -124,6 +123,7 @@
               <h3>Banco de dados</h3>
               <ul>
                 <li>MySQL</li>
+                <li>PostgreSQL</li>
                 <li>SQL</li>
               </ul>
             </div>
@@ -289,7 +289,56 @@
               </div>
             </article>
 
-            <!-- DINOQUIZ -->
+            <!-- GeekWORLD -->
+            <article
+              class="card"
+              tabindex="0"
+              role="button"
+              aria-label="Ver imagem do projeto GeekWorld"
+              data-images='["imagem/lojageek.png"]'
+              onclick="abrirAlbum(JSON.parse(this.dataset.images), 0)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); abrirAlbum(JSON.parse(this.dataset.images), 0);}"
+            >
+              <img
+                src="imagem/lojageek.png"
+                alt="GeekWorld"
+                class="img-card"
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="400"
+              />
+
+              <div class="card-content">
+                <h3>Geek World</h3>
+                <p>
+                  <p style="color: #ff8c00">Projeto de estudo</p>
+                
+                  Loja geek ecommerce para estudo com painel do cliente e painel do administrador. Mdelo de pagamento ficticio e imagens feitas por URL.
+                </p>
+
+                <div class="project-tags" style="color: #7b68ee">
+                  <span>React |</span>
+                  <span>Vite |</span>
+                  <span>Python |</span>
+                  <span>FastAPI |</span>
+                  <span>Pytest |</span>
+                  <span>Docker</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/devlavin/loja-geek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick="event.stopPropagation()"
+                  >
+                    Ver repositório
+                  </a>
+                </div>
+              </div>
+            </article>
+
             <article
               class="card"
               tabindex="0"
